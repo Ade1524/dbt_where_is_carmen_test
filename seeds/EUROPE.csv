@@ -1,4 +1,4 @@
-date_witness,date_filed,witness,agent,lat_,long_,city,country,region_hq,armed?,chapeau?,coat?,observed_action
+date_witness,date_filed,witness,agent,lat_,long_,city,country,region_hq,armed,chapeau,coat,observed_action
 2015-05-02,2015-05-28,Kyle Washington,Leslie Anderson,53.00974,-3.05814,Rhosllanerchrugog,GB,London,False,True,True,sad
 2013-03-12,2013-04-02,Manuel Tate,Natalie Jordan,37.08819,-8.2503,Albufeira,PT,Lisbon,False,False,False,fleeing
 1987-02-07,1987-03-16,Daniel Roberts,Susan Thomas,48.46458,9.22796,Pfullingen,DE,Berlin,False,True,True,lonely
