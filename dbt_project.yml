@@ -37,10 +37,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   Carmen_test:
-    # Applies to all files under models/example/
+    # Applies to all files under models/staging/
     staging:
-      +materialized: view
+      +materialized: table
       +schema: staging
+
+    intermediate:
+      +materialized: view
+      +schema: intermediate
 
 
 
