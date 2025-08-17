@@ -42,12 +42,16 @@ models:
   Carmen_test:
     # Applies to all files under models/staging/
     staging:
-      +materialized: table
+      +materialized: view
       +schema: staging
 
     intermediate:
       +materialized: view
       +schema: intermediate
+
+    mart:
+      +materialized: table
+      +schema: mart
 
 
   
