@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_behavior
+    description: 
+      This dimensional model describe the behavior of Carmen at the moment of the sighting.
+    columns:
+      - name: dim_behavior_key
+        description: The primary key for the dim_behavior model.
+        tests:
+          - not_null
+          - unique
+
+      - name: unique_behavior
+        description: The behavior of Carmen during the sighting.
+
+      - name: num_behavior
+        description:  Number of time Carmen had this behavior during the sightings.
+
+
+      
