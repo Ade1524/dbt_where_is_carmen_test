@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with witness_sightings as (
     select 
         witness,

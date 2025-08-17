@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with location_sightings as (
     select 
         latitude,
