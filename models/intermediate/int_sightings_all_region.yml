@@ -2,33 +2,33 @@ version: 2
 
 models:
   - name: int_sightings_all_region
-    description: "Intermediate model where the staging sighting models are all unite to one single model for an easier analysis "
+    description: Intermediate model where the staging sighting models are all unite to one single model for an easier analysis 
     columns:
       - name: date_witness
-        description: "Date of witness sighting" 
+        description: Date of witness sighting
       - name: date_agent
-        description: "Date of field agent filing the report"
+        description: Date of field agent filing the report
       - name: witness
-        description: "Name of witness sighting the perpetrator"
+        description: Name of witness sighting the perpetrator
       - name: agent
-        description: "Name of field agent filing the report"
+        description: Name of field agent filing the report
       - name: latitude
-        description: "Latitude of sighting"
+        description: Latitude of sighting
       - name: longitude
-        description: "Longitude of sighting"
+        description: Longitude of sighting
       - name: city
-        description: "City of sighting"
+        description: City of sighting
       - name: country
-        description: "Country of sighting"
+        description: Country of sighting
       - name: city_agent
-        description: "HQ city where field agent files the report"
+        description: HQ city where field agent files the report
       - name: has_weapon
-        description: "Was the perpetrator observed to be armed?"
+        description: Was the perpetrator observed to be armed?
       - name: has_hat
-        description: "Was the perpetrator wearing a hat?"
+        description: Was the perpetrator wearing a hat?
       - name: has_jacket
-        description: "Was the perpetrator wearing a jacket?"
+        description: Was the perpetrator wearing a jacket?
       - name: behavior
-        description: "Short description of perpetrator behavior"
+        description: Short description of perpetrator behavior
       - name: region
-        description: "Region nearly continental where have been the sightings"        
+        description: Region nearly continental where have been the sightings       

@@ -1,0 +1,26 @@
+version: 2
+
+seeds:
+  - name: AFRICA
+    description: Data of the sightings that occour in the African nearly continental region loaded from a CSV seed file.
+  
+  - name: AMERICA
+    description: Data of the sightings that occour in the American nearly continental region loaded from a CSV seed file.
+
+  - name: ASIA
+    description: Data of the sightings that occour in the Asian nearly continental region loaded from a CSV seed file.
+
+  - name: ATLANTIC
+    description: Data of the sightings that occour in the Atlantic nearly continental region loaded from a CSV seed file.
+
+  - name: AUSTRALIA
+    description: Data of the sightings that occour in the Australian nearly continental region loaded from a CSV seed file.
+
+  - name: EUROPE
+    description: Data of the sightings that occour in the European nearly continental region loaded from a CSV seed file.
+
+  - name: INDIAN
+    description: Data of the sightings that occour in the Indian nearly continental region loaded from a CSV seed file.
+
+  - name: PACIFIC
+    description: Data of the sightings that occour in the Pacific nearly continental region loaded from a CSV seed file.

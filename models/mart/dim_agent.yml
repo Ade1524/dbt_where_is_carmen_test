@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_agent
+    description: 
+      This dimensional model describe the location of the agent on the field at the moment of the sightings.
+    columns:
+      - name: dim_agent_key
+        description: The primary key for the dim_agent model.
+        tests:
+          - not_null
+          - unique
+
+      - name: agent
+        description: In this column we find the full name of the agent that files the report.
+
+      - name: city_agent
+        description:  HQ city where field agent files the report
+
+      - name: country
+        description: Country where the field agent files the report
+
+      - name: region
+        description: Nearly continential region where the field agent files the report
+
+      

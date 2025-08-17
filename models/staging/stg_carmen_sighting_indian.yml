@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_carmen_sighting_indian
+    description: Staging model that contain data of the sightings in the Indian nearly continental region.
+    columns:
+      - name: date_witness
+        description: "Date of witness sighting" 
+      - name: date_agent
+        description: "Date of field agent filing the report"
+      - name: witness
+        description: "Name of witness sighting the perpetrator"
+      - name: agent
+        description: "Name of field agent filing the report"
+      - name: latitude
+        description: "Latitude of sighting"
+      - name: longitude
+        description: "Longitude of sighting"
+      - name: city
+        description: "City of sighting"
+      - name: country
+        description: "Country of sighting"
+      - name: city_agent
+        description: "HQ city where field agent files the report"
+      - name: has_weapon
+        description: "Was the perpetrator observed to be armed?"
+      - name: has_hat
+        description: "Was the perpetrator wearing a hat?"
+      - name: has_jacket
+        description: "Was the perpetrator wearing a jacket?"
+      - name: behavior
+        description: "Short description of perpetrator behavior"
+      - name: region
+        description: "Region nearly continental where have been the sightings"

@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: A date dimension table containing days, weeks, months, quarters, and years from 1985-01-01 to 2022-12-31.
+    columns:
+      - name: dim_date_key
+        description: This is the primary key the dim_date model.
+        tests:
+          - not_null
+          - unique
+      - name: date_day
+        description: The actual calendar date.
+        tests:
+          - not_null
+          - unique
+      - name: year
+        description: Year number
+      - name: month
+        description: Month number (1-12)"
+      - name: day_of_month
+        description: Day of the month
+      - name: day_of_week
+        description: Numeric day of the week (Sunday=1)
+      - name: day_name
+        description: Name of the day
+      - name: month_name
+        description: Name of the month
+      - name: quarter
+        description: Quarter of the year (1-4)
+      - name: week_of_year
+        description: ISO week number
+      - name: day_of_year
+        description: Day of the year (1-365/366)
+      - name: week_start_date
+        description: The first day of the week
+      - name: month_start_date
+        description: The first day of the month
+      - name: quarter_start_date
+        description: The first day of the quarter
+      - name: year_start_date
+        description: The first day of the year
