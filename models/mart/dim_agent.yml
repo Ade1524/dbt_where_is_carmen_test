@@ -14,13 +14,5 @@ models:
       - name: agent
         description: In this column we find the full name of the agent that files the report.
 
-      - name: city_agent
-        description:  HQ city where field agent files the report
-
-      - name: country
-        description: Country where the field agent files the report
-
-      - name: region
-        description: Nearly continential region where the field agent files the report
-
-      
+      - name: num_agent_reports
+        description:  Number of reports made by the agent on the field. 
