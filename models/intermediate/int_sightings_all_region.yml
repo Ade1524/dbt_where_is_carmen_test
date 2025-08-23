@@ -5,7 +5,7 @@ models:
     description: Intermediate model where the staging sighting models are all unite to one single model for an easier analysis 
     columns:
       - name: date_witness
-        description: Date of witness sighting
+        description: Date when Carmen was seen by the witness.
       - name: date_agent
         description: Date of field agent filing the report
       - name: witness
