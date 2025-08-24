@@ -1,0 +1,19 @@
+version: 2
+
+analyses:
+  - name: three_most_occuring_behavior
+    description: 
+      This model identifies the three most frequently occurring behaviors of
+      Carmen Sandiego across all sightings data. It filters behaviors based on
+      their overall frequency and highlights only the top three.
+
+    columns:
+      - name: behavior
+        description: Behavior observed for Carmen Sandiego.
+        tests:
+          - not_null
+
+      - name: frequency
+        description: The total number of times this behavior was observed across all records.
+        tests:
+          - not_null

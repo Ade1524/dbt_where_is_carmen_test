@@ -1,0 +1,33 @@
+version: 2
+
+analyses:
+  - name: monthly_probability_of_three_behavior
+    description: This model calculates, for each month, the probability that Carmen Sandiego exhibits one of her three most frequently observed behaviors. It helps track
+      recurring behavior patterns over time.
+
+    columns:
+      - name: month
+        description: The calendar month of the sightings.
+        tests:
+          - not_null
+
+      - name: total_Sightings
+        description: The total number of sightings observed for Carmen Sandiego in that month.
+        tests:
+          - not_null
+
+      - name: top_Behavior_Sightings
+        description: The number of sightings in the month where Ms. Sandiego exhibited one of her three most frequent behaviors.
+        tests:
+          - not_null
+
+      - name: probability_Percent
+        description: The probability that Carmen Sandiego exhibits one of her three most occurring behaviors in a given month, calculated as top_three_behavior_sightings / total_sightings.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+              quote: false
+              config:
+                severity: warn
+                where: "probability_top_three_behavior < 0 OR probability_top_three_behavior > 1"

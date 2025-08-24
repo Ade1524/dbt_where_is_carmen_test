@@ -1,0 +1,23 @@
+version: 2
+
+analyses:
+  - name: monthly_city_agent_sightings
+    description: Aggregated fact table showing, for each month, the agency region where Carmen Sandiego is most likely to be found.  
+                 This table is derived from sightings data grouped by month and region.
+
+    columns:
+    
+      - name: month
+        description: The calendar month of the sightings.
+        tests:
+          - not_null
+
+      - name: most_Likely_Region
+        description: Agency region where Carmen Sandiego is most likely to be found in that month.
+        tests:
+          - not_null
+
+      - name: total_Sightings
+        description: Number of sightings reported in the region for that month.
+        tests:
+          - not_null

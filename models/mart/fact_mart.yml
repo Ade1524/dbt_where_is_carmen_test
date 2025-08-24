@@ -1,0 +1,76 @@
+version: 2
+
+models:
+  - name: fact_sightings
+    description: >
+      Fact table containing classified sightings of suspects,
+      joined with dimensions for date, location, witness, agent,
+      and behavior. Includes derived flags and a suspect category.
+    columns:
+      - name: date_witness
+        description: "Original date of sighting reported by witness"
+      - name: dim_date_witness_key
+        description: "Surrogate key linking to dim_date (witness perspective)"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: dim_date_key
+
+      - name: w.dim_witness_key
+        description: "Surrogate key linking to dim_witness"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_witness')
+              field: dim_witness_key
+
+      - name: lo.dim_location_key
+        description: "Surrogate key linking to dim_location"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_location')
+              field: dim_location_key
+
+      - name: latitude
+        description: "Latitude where sighting was reported"
+      - name: longitude
+        description: "Longitude where sighting was reported"
+
+      - name: date_agent
+        description: "Date of sighting from agent record"
+      - name: dim_date_agent_key
+        description: "Surrogate key linking to dim_date (agent perspective)"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: dim_date_key
+
+      - name: a.dim_agent_key
+        description: "Surrogate key linking to dim_agent"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_agent')
+              field: dim_agent_key
+
+      - name: b.dim_behavior_key
+        description: "Surrogate key linking to dim_behavior"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_behavior')
+              field: dim_behavior_key
+
+      - name: is_armed
+        description: "Flag = 1 if suspect has a weapon, else 0"
+      - name: has_a_jacket
+        description: "Flag = 1 if suspect has a jacket, else 0"
+      - name: has_a_hat
+        description: "Flag = 1 if suspect has a hat, else 0"
+      - name: suspect_category
+        description: >
+          Categorization of suspect based on combination of 
+          armed/jacket/hat flags (e.g., 'Is_armed_with_jacket_hat').
