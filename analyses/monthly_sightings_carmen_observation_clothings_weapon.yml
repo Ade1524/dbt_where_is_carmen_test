@@ -1,0 +1,29 @@
+version: 2
+
+analyses:
+  - name: monthly_sightings_carmen_observation_clothings_weapon
+    description: This model aggregates sightings of Carmen Sandiego by month
+      and calculates the probability that she is armed AND wearing a jacket,
+      but NOT a hat. 
+
+    columns:
+      - name: month
+        description: The calendar month of the sightings.
+        tests:
+          - not_null
+          - unique
+
+      - name: total_sightings
+        description: Total number of sightings recorded in the given month.
+        tests:
+          - not_null
+
+      - name: armed_jacket_no_hat_count
+        description: Number of sightings in which Carmen Sandiego is armed (has_weapon = 1), wearing a jacket (has_jacket = 1), and NOT wearing a hat (has_hat = 0).
+        tests:
+          - not_null
+
+      - name: probability_Percent
+        description: Probability that Carmen Sandiego is armed AND wearing a jacket BUT not a hat in a given month. Calculated as armed_jacket_no_hat_sightings / total_sightings.
+        tests:
+          - not_null
